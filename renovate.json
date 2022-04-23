@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "config:base",
+    "local>suzuki-shunsuke/renovate-config"
+  ]
+}

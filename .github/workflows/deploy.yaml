@@ -1,0 +1,35 @@
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '17'
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build
+
+    - name: Generate token
+      id: generate_token
+      uses: tibdex/github-app-token@v1
+      if: github.event_name != 'pull_request'
+      with:
+        app_id: ${{ secrets.APP_ID }}
+        private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
+    - uses: peaceiris/actions-gh-pages@v3
+      if: github.event_name != 'pull_request'
+      with:
+        personal_token: ${{ steps.generate_token.outputs.token }}
+        external_repository: suzuki-shunsuke/renovate-issue-action
+        publish_dir: ./build
+        destination_dir: ./docs
