@@ -31,4 +31,4 @@ If you have any question, please create a Discussion. https://github.com/suzuki-
 
 ## LICENSE
 
-[MIT](LICENSE)
+[MIT](https://github.com/suzuki-shunsuke/renovate-issue-action/blob/main/LICENSE)
