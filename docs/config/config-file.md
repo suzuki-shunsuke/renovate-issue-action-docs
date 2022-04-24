@@ -4,6 +4,8 @@ sidebar_position: 100
 
 # Configuration file
 
+## Configuration file path
+
 Configuration file is optional.
 By default, the file `^\.renovate-issue-action\.ya?ml$` in the current directory is read if it exists.
 You can specify configuration file path with the command line option `--config, -c`.
@@ -11,6 +13,56 @@ You can specify configuration file path with the command line option `--config, 
 ```console
 $ renovate-issue-action --config config.yaml
 ```
+
+## Overview
+
+You can configure the following fields of issues created by renovate-issue-action.
+
+* Repository where issue is created
+* Issue title, description, labels, assignees, and so on
+
+You can change the above setting conditionally per Pull Request according to the following Pull Request metadata.
+
+* Pull Request Labels
+* Renovate metadata such as `packageName`, `depName`, `groupName`, `packageFileDir`
+
+You can also ignore Pull Requests conditionally.
+For example, you can ignore Pull Requests regarding to specific packages.
+
+## Configuration Overlays
+
+There are some configuration layers.
+
+1. conditional configuration in `entries`
+
+e.g.
+
+```yaml
+entries:
+- if: Metadata.PackageName == "actions/checkout"
+  issue:
+    labels: ["checkout"]
+```
+
+2. global configuration
+
+e.g.
+
+```yaml
+issue:
+  assignees: ["suzuki-shunsuke"]
+```
+
+3. Built-in default Configuration (Configuration file is optional)
+
+Each configuration are merged and duplicated configuration fields are overridden.
+Elements of `entries` are evaluated one by one from the first element.
+Each element of `entries` has `if` field, and the evaluation result of `if` field must be `true` or `false`.
+If the evaluation result of `if` field is `false`, the entry is ignored and the next entry is evaluated.
+If the evaluation result of `if` field is `true`, the entry is selected and subsequent entries are ignored.
+If no element is selected, `entries` is ignored.
+
+## Example
 
 e.g. renovate-issue-action.yaml
 
@@ -53,5 +105,3 @@ entries:
     addtional_labels: ["sre"]
     addtional_assignees: ["octocat"]
 ```
-
-
