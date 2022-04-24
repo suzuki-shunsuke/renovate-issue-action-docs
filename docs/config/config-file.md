@@ -44,7 +44,10 @@ entries:
 - if: Metadata.PackageName == "actions/cache"
   ignore: true # If `ignore` is true, do nothing.
 - if: |
-    "sre" in Labels
+    any(Labels, {# in Vars.labels})
+  vars:
+  - name: labels
+    value: ["sre"]
   issue:
     repo_name: sre-issues
     addtional_labels: ["sre"]
