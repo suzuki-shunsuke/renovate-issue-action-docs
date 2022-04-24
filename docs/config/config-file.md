@@ -15,7 +15,7 @@ $ renovate-issue-action --config config.yaml
 e.g. renovate-issue-action.yaml
 
 ```yaml
-renovate_login: 'renovate[bot]' # By default, 'renovate[bot]'
+renovate_login: 'renovate[bot]' # By default, 'renovate[bot]'. If you use Self-hosted Renovate, you have to set this field.
 issue:
   repo_owner: suzuki-shunsuke # By default, the repository which GitHub Actions is run
   repo_name: renovate-issue-action # By default, the repository which GitHub Actions is run

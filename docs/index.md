@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # renovate-issue-action
 
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/renovate-issue-action/main/LICENSE)
+
 https://github.com/suzuki-shunsuke/renovate-issue-action
 
 Create, update, and close GitHub Issues with GitHub Actions according to [Renovate](https://github.com/renovatebot/renovate) Pull Requests.
@@ -15,6 +17,7 @@ Especially, this tool is useful for the usecase which you have to handle a numbe
 * [How to use](how-to-use)
 * [Install](install)
 * [Configuration](config)
+* [Release Note](https://github.com/suzuki-shunsuke/renovate-issue-action/releases)
 
 ## Question (GitHub Discussions)
 
