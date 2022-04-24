@@ -16,11 +16,6 @@ Especially, this tool is useful for the usecase which you have to handle a numbe
 * [Install](install)
 * [Configuration](config)
 
-## :warning: Don't use this yet
-
-This is still under development.
-The development status is alpha.
-
 ## Question (GitHub Discussions)
 
 If you have any question, please create a Discussion. https://github.com/suzuki-shunsuke/renovate-issue-action/discussions
