@@ -16,3 +16,4 @@ In the template, [sprig Function](http://masterminds.github.io/sprig/) can be us
   * PackageName
   * DepName
   * PackageFileDir
+  * UpdateType
