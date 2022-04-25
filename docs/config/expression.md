@@ -16,9 +16,10 @@ entries:
 
 ### Expression Variables
 
+* Labels []string: Pull Request Label Names
 * Metadata
   * GroupName
   * PackageName
   * DepName
   * PackageFileDir
-* Labels []string: Pull Request Label Names
+  * UpdateType
