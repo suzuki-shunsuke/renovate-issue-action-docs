@@ -10,6 +10,7 @@ The following environment variables are required.
 
 Furthermore, the following [GitHub Actions Default environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables) are used.
 
+* GITHUB_ACTOR
 * GITHUB_EVENT_PATH
 * GITHUB_RUN_ID
 
