@@ -109,7 +109,7 @@ entries:
     repo_name: sre-issues
     addtional_labels: ["sre"]
     addtional_assignees: ["octocat"]
-    additional_body: @suzuki-shunsuke
+    additional_body: "@suzuki-shunsuke"
     projects:
     - sre
     - service-a
