@@ -67,6 +67,11 @@ If no element is selected, `entries` is ignored.
 e.g. renovate-issue-action.yaml
 
 ```yaml
+projects: # By default, empty
+- alias: sre
+  column_id: PC_*** # GitHub Project Column ID
+- alias: service-a
+  next_id: PN_*** # Project Next Item ID
 renovate_login: 'renovate[bot]' # By default, 'renovate[bot]'. If you use Self-hosted Renovate, you have to set this field.
 issue:
   repo_owner: suzuki-shunsuke # By default, the repository which GitHub Actions is run
@@ -105,4 +110,7 @@ entries:
     addtional_labels: ["sre"]
     addtional_assignees: ["octocat"]
     additional_body: @suzuki-shunsuke
+    projects:
+    - sre
+    - service-a
 ```
