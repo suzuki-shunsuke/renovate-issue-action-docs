@@ -77,7 +77,7 @@ issue:
   repo_owner: suzuki-shunsuke # By default, the repository which GitHub Actions is run
   repo_name: renovate-issue-action # By default, the repository which GitHub Actions is run
   title: 'Renovate Automerge Failure({{.RepoOwner}}/{{.RepoName}}): {{if .Metadata.GroupName}}{{.Metadata.GroupName}}{{else}}{{.Metadata.PackageName}}{{.Metadata.DepName}}{{end}} {{if .Metadata.PackageFileDir}}({{.Metadata.PackageFileDir}}){{end}}'
-  description_header: |
+  body: |
     _This pull request was created by [renovate-issue-action](https://github.com/suzuki-shunsuke/renovate-issue-action)._
 
     :warning: Please don't edit the Issue title, because renovate-issue-action searches issue with Issue title.
@@ -85,7 +85,6 @@ issue:
     {{if .Metadata.PackageName}}packageName: {{.Metadata.PackageName}}{{end}}
     {{if .Metadata.GroupName}}groupName: {{.Metadata.GroupName}}{{end}}
     {{if .Metadata.DepName}}depName: {{.Metadata.DepName}}{{end}}
-  description_body: "" # By default, empty
   assignees: ["suzuki-shunsuke"] # By default, null
   labels: ["renovate-issue-action"] # By default, null
 entries:
@@ -93,7 +92,7 @@ entries:
   issue:
     labels: []
     assignees: []
-    description_body: |
+    additional_body: |
       ## What to do
 
       * Check closed Pull Requests
