@@ -23,3 +23,4 @@ you have to use Personal Access Token or GitHub App's token.
 The following permissions are required.
 
 * `issues:write`
+* `projects:write`: (optional) If you add issues to projects, this permission is needed
