@@ -11,7 +11,7 @@ https://github.com/suzuki-shunsuke/renovate-issue-action
 Create, update, and close GitHub Issues with GitHub Actions according to [Renovate](https://github.com/renovatebot/renovate) Pull Requests.
 Especially, this tool is useful for the usecase which you have to handle a number of Pull Requests automatically and some pull requests can't be merged automatically due to CI failure.
 
-![image](https://user-images.githubusercontent.com/13323303/164878956-45d9ba65-436b-48a8-ae7d-d76712822007.png)
+![image](https://user-images.githubusercontent.com/13323303/170421309-54f362cb-5aa8-4a08-bafd-7c5f22c9b695.png)
 
 * [Overview](overview)
 * [How to use](how-to-use)
