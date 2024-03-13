@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     "local>suzuki-shunsuke/renovate-config"
   ]
 }
